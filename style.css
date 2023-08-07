@@ -2,8 +2,8 @@ body {
   background-color: #c6cbca;
   margin: 0;
 }
-p{
-  font-family: 'Petit Formal Script', regular;
+p {
+  font-family: "Petit Formal Script", regular;
   font-size: 16px;
   padding: 0 16px;
 }
@@ -16,20 +16,21 @@ header {
   padding: 20px 0;
 }
 
-  .title-header {
-    text-align: center;
-    font-family: "Amatic SC", cursive;
-  }
+.title-header {
+  text-align: center;
+  font-family: "Amatic SC", cursive;
+}
 
-  .nav-list {
-    display: -webkit-flex;
-    list-style: none;
-    display: flex;
-    gap: 16px;
-    justify-content: center;
-    font-family: "Amatic SC";
-  }
-
+.nav-list {
+  display: -webkit-flex;
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  font-family: "Amatic SC";
+  font-weight: 600;
+  font-size: 16px;
+}
 
 .section-container {
   position: relative;
@@ -59,6 +60,8 @@ section {
 .img-ring {
   width: -webkit-fill-available;
   width: 100%;
+  position: absolute;
+  bottom: -30px;
 }
 
 .material-symbols-outlined {
@@ -78,7 +81,9 @@ a {
   text-decoration: none;
   color: black;
 }
-
+li:hover {
+  color: red;
+}
 
 input,
 select {
@@ -97,20 +102,32 @@ select {
   gap: 8px;
 }
 
-
 .list-info {
-margin-top: 10%;
-}
-
-.list-info div{
   margin-top: 10%;
 }
 
+.list-info div {
+  margin-top: 10%;
+}
+
+.list-contacts, .list-contacts>div{
+  margin-top: 10%;
+}
 
 @media (min-width: 768px) {
+  .section-img {
+    height: 400px;
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+  }
 
   .img-ring {
-    height: 200px;
+    display: none;
+  }
+
+  .image-title {
+    left: 45%;
   }
 
   .list-info {
@@ -118,11 +135,18 @@ margin-top: 10%;
     justify-content: space-evenly;
     margin-top: 3%;
     height: 373px;
-    align-items: stretch;
+    align-items: baseline;
+  }
+  .list-info > div{
+   width: 33%;
+  }
+
+  .list-contacts, .list-contacts>div{
+    margin-top: 3%;
   }
 }
 
-@media (max-width: 767px){
+@media (max-width: 767px) {
   .nav-list {
     margin-inline-start: -36px;
   }
